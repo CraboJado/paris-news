@@ -85,3 +85,98 @@ body {
 .header-nav__connection:hover::before {
   height: 0.7rem;
 }
+
+/*************** Main**************/
+.side-nav {
+  font-weight: 600;
+}
+.side-nav__title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.side-nav__list {
+  text-transform: uppercase;
+}
+.side-nav__locations {
+  gap: 2.2rem;
+}
+.side-nav__locations li:hover .icon-location {
+  filter: brightness(2);
+}
+.side-nav__locations a {
+  padding: 1.1rem;
+  background-color: #f4f3f3;
+}
+.side-nav__locations .icon-location {
+  font-size: 1.5rem;
+  color: #354bcf;
+}
+.side-nav__locations span {
+  color: #071f32;
+}
+.side-nav__map {
+  color: #e22c3f;
+  padding: 5px;
+  width: 40%;
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.side-nav__map::before {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+.side-nav__map:hover::before {
+  width: 100%;
+  background-color: #e22c3f;
+}
+.side-nav__map:hover {
+  color: white;
+}
+.side-nav__services {
+  width: 95%;
+}
+.side-nav__services li {
+  width: 95%;
+  border-top: 2px solid #e8e8e8;
+  padding: 1.5rem 0;
+  position: relative;
+}
+.side-nav__services li::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  transition: all 0.3s ease;
+  background-color: #071f32;
+}
+.side-nav__services li:hover::before {
+  width: 100%;
+}
+.side-nav__services li:hover img {
+  background-color: #071f32;
+}
+.side-nav__services a {
+  gap: 1rem;
+}
+.side-nav__services img {
+  width: 20%;
+  background-color: #e8e8e8;
+  border-radius: 50%;
+  padding: 1rem;
+}
+.side-nav__services span {
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 50%;
+}

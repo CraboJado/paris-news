@@ -1,48 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paris Homework</title>
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <!-- fontello -->
-    <link rel="stylesheet" href="./assets/fontello/css/fontello.css">
+    <link rel="stylesheet" href="./assets/fontello/css/fontello.css" />
     <!-- google font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
     <!-- css -->
-    <link rel="stylesheet" href="./assets/css/normalize.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
-    
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
 </head>
+
 <body>
     <!-- header begin -->
-    <header class="d-flex justify-content-around align-items-center py-4 px-5 border-bottom border-3">
+    <header class="d-flex justify-content-around align-items-center py-4 px-4 border-bottom border-3">
         <h1 class="header-logo m-0">
-            <img src="./assets/images/paris_logo.svg" alt="paris">
+            <img src="./assets/images/paris_logo.svg" alt="paris" />
         </h1>
         <nav class="header-nav d-flex gap-5 align-items-center">
-            <ul class=" header-nav__list d-flex list-unstyled justify-content-around align-items-center m-0 gap-5">
+            <ul class="header-nav__list d-flex list-unstyled justify-content-around align-items-center m-0 gap-5">
                 <li class="text-center"><a href="">Services</a></li>
                 <li class="text-center"><a href="">Municipalité</a></li>
                 <li class="text-center"><a href="">Participez !</a></li>
                 <li class="text-center"><a href="">Que faire à Paris ?</a></li>
                 <li class="text-center"><a href="">Jeux 2024</a></li>
             </ul>
-            <button type="button" class="header-nav__btn btn btn-secondary d-flex justify-content-around gap-3 rounded-0 align-items-center">
+            <button type="button"
+                class="header-nav__btn btn btn-secondary d-flex justify-content-around gap-3 rounded-0 align-items-center">
                 <i class="icon-search"></i>
                 <span>Research</span>
             </button>
-            <a class="header-nav__connection"> 
+            <a class="header-nav__connection">
                 <span>Mon paris</span>
-                <img src="./assets/images/user.svg" alt="">
+                <img src="./assets/images/user.svg" alt="" />
             </a>
         </nav>
     </header>
     <!-- header end -->
+    <main class="container-fluid">
+        <div class="row">
+            <section class="side-nav col text-center d-flex flex-column gap-4">
+                <h2 class="side-nav__title mt-5">Accès rapides</h2>
+                <nav class="side-nav__list d-flex flex-column gap-4 align-items-center">
+                    <ul class="side-nav__locations d-flex flex-column p-0">
+                        <li class="">
+                            <a href="">
+                                <i class="icon-location"></i>
+                                <span>Piscines</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                <i class="icon-location"></i>
+                                <span>Parcs, jardins et bois</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                <i class="icon-location"></i>
+                                <span>Mairies d'arrondissement</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                <i class="icon-location"></i>
+                                <span>Bibliothèques</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="side-nav__map" href="">voir la carte</a>
+                    <ul class="side-nav__services d-flex flex-column">
+                        <li>
+                            <a href="" class="d-flex align-items-center">
+                                <img src="https://cdn.paris.fr/paris/2020/09/30/ad73fb242f691bc9ba2b66f99554dd87.svg"/>
+                                <span>Carte d'identité / Passeport</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="d-flex align-items-center">
+                                <img src="https://cdn.paris.fr/paris/2020/09/30/145b5b043369d2c3e57a05ed85b33cb1.svg" />
+                                <span>Travailler à Paris</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="news col-6">
+                <h2>À la Une</h2>
+                <h3>
+                    Paris renforce son accessibilité en vue des Jeux olympiques et
+                    paralympiques
+                </h3>
+                <p>
+                    Alors que près de 350 000 visiteurs en situation de handicap sont
+                    attendus à Paris pour les Jeux olympiques et paralympiques, la Ville
+                    renforce son accessibilité …
+                </p>
+                <article>
+                    <h2>Actualité</h2>
+                    <h3>
+                        J-500 avant les Jeux paralympiques : tout ce qu'il faut savoir
+                        pour en profiter
+                    </h3>
+                </article>
+                <article>
+                    <h2>Actualité</h2>
+                    <h3>
+                        J-500 avant les Jeux paralympiques : tout ce qu'il faut savoir
+                        pour en profiter
+                    </h3>
+                </article>
+            </section>
+            <aside class="col">aside</aside>
+        </div>
+    </main>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

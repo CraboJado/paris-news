@@ -103,3 +103,126 @@ body {
     }
 
 }
+
+/*************** Main**************/
+.side-nav {
+    font-weight: 600;
+
+    &__title{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    &__list {
+        text-transform: uppercase;
+    }
+
+    &__locations {
+        gap:2.2rem;
+
+        li:hover .icon-location {
+            filter: brightness(2)
+        }
+    
+        a {
+            padding: 1.1rem;
+            background-color:#f4f3f3 ; 
+        }
+    
+        .icon-location {
+            font-size: 1.5rem;
+            color:var.$secondaryBlue;
+        }
+    
+        span {
+            color:var.$baseBlue;
+        }
+    
+    }
+
+    &__map {
+        color:#e22c3f;
+        padding:5px;
+        width: 40%;
+        position: relative;
+        font-size: 1.1rem;
+        font-weight: 500;
+        
+
+        &::before{
+            content:"";
+            display: block;
+            width: 0%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.3s ease;
+            z-index:-1;
+        }
+
+        &:hover::before{
+            width: 100%;
+            background-color: #e22c3f;
+        }
+
+        &:hover{
+            color:white;
+        }
+    }
+
+    &__services {
+        width: 95%;
+
+        li {
+            width: 95%;
+            border-top: 2px solid var.$bcgGrey;
+            padding:1.5rem 0;
+            position: relative;
+
+            &::before{
+                content:"";
+                display: block;
+                width: 0;
+                height: 2px;
+                position: absolute;
+                top: -2px;
+                left: 0;
+                transition: all 0.3s ease;
+                background-color:var.$baseBlue;
+            }
+
+            &:hover::before{
+                width: 100%;
+            }
+
+            &:hover img {
+                background-color: var.$baseBlue;
+            }
+        }
+
+        a {
+           gap:1rem; 
+        }
+
+        img {
+            width: 20%;
+            background-color: var.$bcgGrey;
+            border-radius: 50%;
+            padding: 1rem;
+        }
+
+        span {
+            font-size: 1.2rem;
+            font-weight: 400;
+            width: 50%;
+        }
+    }
+
+}
+
+
+
+
+
+
