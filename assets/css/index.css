@@ -1,3 +1,87 @@
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+.header-logo img {
+  width: 90%;
+}
+
+.header-nav {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.header-nav__list li {
+  position: relative;
+  padding: 0 1rem;
+}
+.header-nav__list li::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0px;
+  background-color: #071f32;
+  position: absolute;
+  top: -96%;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.header-nav__list li:hover::before {
+  height: 0.7rem;
+}
+.header-nav__btn {
+  padding: 1rem 2rem;
+  color: #071f32;
+  background-color: #e8e8e8;
+  border: none;
+  font-weight: 600;
+  font-size: 1.3rem;
+  position: relative;
+}
+.header-nav__btn span, .header-nav__btn i {
+  position: relative;
+  z-index: 999;
+}
+.header-nav__btn i {
+  font-size: 1.8rem;
+}
+.header-nav__btn::before {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+}
+.header-nav__btn:hover::before {
+  width: 100%;
+  background-color: #071f32;
+}
+.header-nav__btn:hover {
+  color: white;
+}
+.header-nav__connection {
+  color: #354bcf;
+  cursor: pointer;
+  position: relative;
+  padding: 0 1rem;
+}
+.header-nav__connection::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  background-color: #354bcf;
+  position: absolute;
+  top: -70%;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.header-nav__connection:hover::before {
+  height: 0.7rem;
 }
