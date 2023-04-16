@@ -41,7 +41,8 @@ body {
   font-size: 1.3rem;
   position: relative;
 }
-.header-nav__btn span, .header-nav__btn i {
+.header-nav__btn span,
+.header-nav__btn i {
   position: relative;
   z-index: 999;
 }
@@ -236,7 +237,7 @@ body {
 }
 
 .actuality__article {
-  width: 40%;
+  width: 43%;
 }
 .actuality__article .actuality__img {
   position: relative;
@@ -251,7 +252,7 @@ body {
   height: 100%;
   background-color: #e8e8e8;
   position: absolute;
-  right: -7.4rem;
+  right: -5rem;
   top: 0;
 }
 .actuality__article img {
@@ -289,3 +290,77 @@ body {
   font-size: 1.8rem;
   font-weight: 800;
 }
+
+/*********** aside *****************/
+.aside-news__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 5rem;
+}
+
+.aside-news__item {
+  display: flex;
+  border-bottom: 1px solid #e8e8e8;
+  gap: 1.3rem;
+  padding: 1.5rem 0 2.5rem;
+  position: relative;
+}
+.aside-news__item::after {
+  background: #e22c3f;
+  bottom: 0;
+  content: "";
+  left: 1.6rem;
+  position: absolute;
+  top: 9.4rem;
+  width: 0.1rem;
+}
+.aside-news__item .date,
+.aside-news__item .month {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin: 0;
+  height: 2.8rem;
+  line-height: 2.8rem;
+}
+.aside-news__item .content-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.aside-news__item .content {
+  font-size: 1.5rem;
+}
+.aside-news__item .aside__showmore-btn {
+  color: #e22c3f;
+  padding: 3px 10px;
+  width: 40%;
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.aside-news__item .aside__showmore-btn::before {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+.aside-news__item .aside__showmore-btn:hover::before {
+  width: 100%;
+  background-color: #e22c3f;
+}
+.aside-news__item .aside__showmore-btn:hover {
+  color: white;
+}
+.aside-news__item .aside-news__item-img {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/*******************main end**************/
+/*******************footer ***************/
