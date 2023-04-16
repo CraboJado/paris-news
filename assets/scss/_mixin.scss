@@ -1,0 +1,9 @@
+
+@mixin pseudo-element-slide {
+    content:"";
+    display: block;
+    width: 100%;
+    position: absolute;
+    transition: all 0.3s ease;
+
+}

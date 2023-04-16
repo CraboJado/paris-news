@@ -19,14 +19,14 @@ body {
   padding: 0 1rem;
 }
 .header-nav__list li::before {
+  height: 0px;
+  background-color: #071f32;
+  top: -96%;
+  left: 0;
   content: "";
   display: block;
   width: 100%;
-  height: 0px;
-  background-color: #071f32;
   position: absolute;
-  top: -96%;
-  left: 0;
   transition: all 0.3s ease;
 }
 .header-nav__list li:hover::before {
@@ -179,4 +179,113 @@ body {
   font-size: 1.2rem;
   font-weight: 400;
   width: 50%;
+}
+
+/** News */
+.spotlight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.spotlight__article .img-wrapper {
+  overflow: hidden;
+}
+.spotlight__article img {
+  width: 100%;
+  position: relative;
+  top: -2px;
+  left: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.spotlight__article img:hover {
+  transform: scale(1.1);
+}
+.spotlight__content {
+  position: relative;
+  background-color: white;
+  padding: 4rem 3rem;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20%);
+}
+.spotlight__content h2 {
+  position: absolute;
+  padding: 1.1rem 2rem;
+  background-color: #0082f8;
+  font-size: 1.6rem;
+  top: -20px;
+  left: 30px;
+  transform: skewY(-5deg);
+  color: white;
+  font-weight: 600;
+}
+.spotlight__content h3 {
+  font-size: 4.2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+.spotlight__content p {
+  font-size: 1.5rem;
+}
+
+.actuality {
+  display: flex;
+  justify-content: space-between;
+}
+
+.actuality__article {
+  width: 40%;
+}
+.actuality__article .actuality__img {
+  position: relative;
+}
+.actuality__article .actuality__img .img-wrapper {
+  overflow: hidden;
+}
+.actuality__article .actuality__img::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: #e8e8e8;
+  position: absolute;
+  right: -7.4rem;
+  top: 0;
+}
+.actuality__article img {
+  width: 100%;
+  position: relative;
+  top: -2px;
+  left: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.actuality__article img:hover {
+  transform: scale(1.1);
+}
+.actuality__content {
+  position: relative;
+  background-color: white;
+  padding: 2.5rem 1.2rem;
+  width: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.actuality__content h2 {
+  position: absolute;
+  padding: 1.1rem 2rem;
+  background-color: #0082f8;
+  font-size: 1rem;
+  top: -20px;
+  left: 30px;
+  transform: skewY(-5deg);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.actuality__content h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
 }
