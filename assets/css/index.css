@@ -198,6 +198,7 @@ body {
 .spotlight__article {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 .spotlight__img {
   overflow: hidden;
