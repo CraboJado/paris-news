@@ -9,31 +9,26 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.header-logo {
-    img {
-        width: 90%;
-    }
+/**** header *******/
+.header-logo img {
+    width: 90%;
+
 }
 
+/**** header-nav *******/
 .header-nav {
     font-size: 1.8rem;
     font-weight: 600;
 
+    /***** header-nav__list ******/
     &__list li {
         position: relative;
         padding: 0 1rem;
 
         &::before {
-            // content:"";
-            // display: block;
-            // width: 100%;
-            height: 0px;
+            @include mixin.pseudo-element-slideY;
             background-color: var.$baseBlue;
-            // position: absolute;
             top: -96%;
-            left: 0;
-            // transition: all 0.3s ease;
-            @include mixin.pseudo-element-slide
         }
 
         &:hover::before {
@@ -42,6 +37,7 @@ body {
 
     }
 
+    /***** header-nav__btn ******/
     &__btn {
         padding: 1rem 2rem;
         color: var.$baseBlue;
@@ -51,8 +47,7 @@ body {
         font-size: 1.3rem;
         position: relative;
 
-        span,
-        i {
+        span, i {
             position: relative;
             z-index: 999;
         }
@@ -62,19 +57,14 @@ body {
         }
 
         &::before {
-            content: "";
-            display: block;
-            width: 0%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
+            
+            @include mixin.pseudo-element-slideX;
+            background-color: var.$baseBlue;
             transition: all 0.2s ease;
         }
 
         &:hover::before {
             width: 100%;
-            background-color: var.$baseBlue;
         }
 
         &:hover {
@@ -82,6 +72,7 @@ body {
         }
     }
 
+    /***** header-nav__connection ******/
     &__connection {
         color: var.$secondaryBlue;
         cursor: pointer;
@@ -89,15 +80,10 @@ body {
         padding: 0 1rem;
 
         &::before {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 0;
-            background-color: var.$secondaryBlue;
-            position: absolute;
+
+            @include mixin.pseudo-element-slideY;
             top: -70%;
-            left: 0;
-            transition: all 0.3s ease;
+            background-color: var.$secondaryBlue;
         }
 
         &:hover::before {
@@ -108,18 +94,22 @@ body {
 }
 
 /*************** Main**************/
+
+/*************** side-nav**************/
 .side-nav {
     font-weight: 600;
-
+    /*****side-nav__title******/
     &__title {
         font-size: 2rem;
         font-weight: 600;
     }
 
+    /*****side-nav__list******/
     &__list {
         text-transform: uppercase;
     }
 
+    /*****side-nav__locations******/
     &__locations {
         gap: 2.2rem;
 
@@ -143,30 +133,32 @@ body {
 
     }
 
+    /*****side-nav___map ******/
     &__map {
-        color: #e22c3f;
         padding: 5px;
         width: 40%;
-        position: relative;
         font-size: 1.1rem;
         font-weight: 500;
+        color: #e22c3f;
+        position: relative;
 
 
         &::before {
-            content: "";
-            display: block;
-            width: 0%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
+            // content: "";
+            // display: block;
+            // width: 0%;
+            // height: 100%;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            @include mixin.pseudo-element-slideX;
+            background-color: #e22c3f;
             transition: all 0.3s ease;
             z-index: -1;
         }
 
         &:hover::before {
             width: 100%;
-            background-color: #e22c3f;
         }
 
         &:hover {
@@ -174,6 +166,7 @@ body {
         }
     }
 
+    /*****side-nav__services ******/
     &__services {
         width: 95%;
 
@@ -184,13 +177,15 @@ body {
             position: relative;
 
             &::before {
-                content: "";
-                display: block;
+                // content: "";
+                // display: block;
+                // position: absolute;
+                // left: 0;
+
+                @include mixin.pseudo-element;
+                top: -2px;
                 width: 0;
                 height: 2px;
-                position: absolute;
-                top: -2px;
-                left: 0;
                 transition: all 0.3s ease;
                 background-color: var.$baseBlue;
             }
@@ -200,7 +195,7 @@ body {
             }
 
             &:hover svg {
-                fill:white;
+                fill: white;
                 background-color: var.$baseBlue;
             }
         }
@@ -224,51 +219,37 @@ body {
     }
 }
 
-/** News */
-.spotlight {
+
+/*************** spotlight **************/
+
+/*************** spotlight__article **************/
+.spotlight__article {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
+    gap: 3rem;
 
-.spotlight__article {
-
-    .img-wrapper {
+    @at-root .spotlight__img {
         overflow: hidden;
-    }
 
-    img {
-        width: 100%;
-        position: relative;
-        top: -2px;
-        left: 0;
-        cursor: pointer;
-        transition: all 0.3s ease;
-
-        &:hover {
-            transform: scale(1.1);
+        img {
+            @include mixin.img-scale;
         }
 
     }
 
     @at-root .spotlight__content {
-        position: relative;
-        background-color: white;
-        padding: 4rem 3rem;
+
         width: 80%;
+        padding: 4rem 3rem;
+        position: relative;
         left: 50%;
+        background-color: white;
         transform: translateX(-50%) translateY(-20%);
 
         h2 {
-            position: absolute;
-            padding: 1.1rem 2rem;
-            background-color: var.$bcgBlue;
+
+            @include mixin.skewTag;
             font-size: 1.6rem;
-            top: -20px;
-            left: 30px;
-            transform: skewY(-5deg);
-            color: white;
-            font-weight: 600;
         }
 
         h3 {
@@ -285,12 +266,8 @@ body {
 
 }
 
-.actuality {
-    display: flex;
-    justify-content: space-between;
 
-}
-
+/*************** actuality__article **************/
 .actuality__article {
     width: 43%;
 
@@ -314,17 +291,7 @@ body {
     }
 
     img {
-        width: 100%;
-        position: relative;
-        top: -2px;
-        left: 0;
-        cursor: pointer;
-        transition: all 0.3s ease;
-
-        &:hover {
-            transform: scale(1.1);
-        }
-
+        @include mixin.img-scale;
     }
 
     @at-root .actuality__content {
@@ -336,15 +303,8 @@ body {
         transform: translateX(-50%);
 
         h2 {
-            position: absolute;
-            padding: 1.1rem 2rem;
-            background-color: var.$bcgBlue;
+            @include mixin.skewTag;
             font-size: 1rem;
-            top: -20px;
-            left: 30px;
-            transform: skewY(-5deg);
-            color: white;
-            font-weight: 600;
             text-transform: uppercase;
         }
 
@@ -357,96 +317,90 @@ body {
 }
 
 /*********** aside *****************/
-
 .aside-news__list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding-left: 5rem;
-}
 
-.aside-news__item {
-    display: flex;
-    border-bottom: 1px solid var.$bcgGrey;
-    gap: 1.3rem;
-    padding: 1.5rem 0 2.5rem;
-    position: relative;
-
-    &::after {
-        background: #e22c3f;
-        bottom: 0;
-        content: "";
-        left: 1.6rem;
-        position: absolute;
-        top: 9.4rem;
-        width: 0.1rem;
-    }
-
-    .date,
-    .month {
-        font-size: 2.8rem;
-        font-weight: 600;
-        margin: 0;
-        height: 2.8rem;
-        line-height: 2.8rem;
-    }
-
-    .content-wrap {
+    @at-root .aside-news__item {
         display: flex;
-        flex-direction: column;
-        gap: 1.2rem;
-    }
-
-    .content {
-        font-size: 1.5rem;
-    }
-
-    .aside__showmore-btn {
-        color: #e22c3f;
-        padding: 3px 10px;
-        width: 40%;
+        border-bottom: 1px solid var.$bcgGrey;
+        gap: 1.3rem;
+        padding: 1.5rem 0 2.5rem;
         position: relative;
-        font-size: 1.5rem;
-        font-weight: 500;
-
-
-        &::before {
+    
+        &::after {
+            background: #e22c3f;
+            bottom: 0;
             content: "";
-            display: block;
-            width: 0%;
-            height: 100%;
+            left: 1.6rem;
             position: absolute;
-            top: 0;
-            left: 0;
-            transition: all 0.3s ease;
-            z-index: -1;
+            top: 9.4rem;
+            width: 0.1rem;
         }
+    
+        .date,
+        .month {
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin: 0;
+            height: 2.8rem;
+            line-height: 2.8rem;
+        }
+    
+        .content-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+    
+        .content {
+            font-size: 1.5rem;
+        }
+    
+        .aside__showmore-btn {
+            color: #e22c3f;
+            padding: 3px 10px;
+            width: 40%;
+            position: relative;
+            font-size: 1.5rem;
+            font-weight: 500;
+    
+            &::before {
 
-        &:hover::before {
+                @include mixin.pseudo-element-slideX;
+                transition: all 0.3s ease;
+                z-index: -1;
+            }
+    
+            &:hover::before {
+                width: 100%;
+                background-color: #e22c3f;
+            }
+    
+            &:hover {
+                color: white;
+            }
+    
+        }
+    
+        .aside-news__item-img {
             width: 100%;
-            background-color: #e22c3f;
+            margin-top: 1rem;
         }
-
-        &:hover {
-            color: white;
-        }
-
+    
     }
-
-    .aside-news__item-img {
-        width: 100%;
-        margin-top: 1rem;
-    }
-
 
 }
-
 /*******************main end**************/
+
 /*******************footer ***************/
 
 .footer {
     display: flex;
 
+    /*****footer-left ******/
     @at-root &-left {
         flex: 2.5;
         background-color: #fafbfb;
@@ -522,13 +476,8 @@ body {
 
 
                     &::before {
-                        content: "";
-                        display: block;
-                        width: 0%;
-                        height: 100%;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
+
+                        @include mixin.pseudo-element-slideX;
                         transition: all 0.3s ease;
                         z-index: -1;
                         background-color: #e22c3f;
@@ -561,8 +510,9 @@ body {
                 li {
                     cursor: pointer;
                     font-size: 1.1rem;
+
                     &:hover {
-                        color:#e22c3f;
+                        color: #e22c3f;
                     }
                 }
             }
@@ -570,8 +520,8 @@ body {
 
     }
 
-
-    &-right {
+    /*****footer-left ******/
+    @at-root &-right {
         flex: 1.5;
         background-color: var.$baseBlue;
         color: #fff;
@@ -584,7 +534,7 @@ body {
             margin-bottom: 1.5rem;
         }
 
-        input[type='email']{
+        input[type='email'] {
             border: none;
             outline: none;
             width: 63%;
@@ -596,7 +546,7 @@ body {
             padding: 1.8rem;
             color: white;
             background-color: #e22c3f;
-            border:none;
+            border: none;
             outline: none;
             font-weight: 700;
             position: relative;
@@ -605,31 +555,27 @@ body {
                 position: relative;
                 z-index: 999;
             }
-          
+
             &::before {
-                content: "";
-                display: block;
-                width: 0%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
+
+                @include mixin.pseudo-element-slideX;
                 transition: all 0.3s ease;
                 background-color: white;
             }
-        
+
             &:hover::before {
                 width: 100%;
             }
-        
+
             &:hover {
                 color: #e22c3f;
             }
         }
 
-        p:nth-of-type(2){
+        p:nth-of-type(2) {
             margin-top: 3rem;
         }
+
         .social-icons {
             display: flex;
             font-size: 2rem;
@@ -638,10 +584,11 @@ body {
             margin-bottom: 3rem;
         }
 
-        p:nth-of-type(3){
+        p:nth-of-type(3) {
             font-size: 1.6rem;
         }
-        & > a {
+
+        &>a {
             font-size: 1.6rem;
             text-transform: uppercase;
             color: #e22c3f;
@@ -651,26 +598,20 @@ body {
             padding: 1rem;
 
             &::before {
-                content: "";
-                display: block;
-                width: 0%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
+
+                @include mixin.pseudo-element-slideX;
                 transition: all 0.3s ease;
                 z-index: -1;
-            };
+            }
 
             &:hover::before {
                 width: 100%;
                 background-color: #e22c3f;
             }
-        
+
             &:hover {
                 color: white;
             }
-        
 
         }
     }

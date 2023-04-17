@@ -1,9 +1,51 @@
 
-@mixin pseudo-element-slide {
-    content:"";
+
+@mixin pseudo-element {
+    content: "";
     display: block;
-    width: 100%;
     position: absolute;
+    left: 0;
+}
+
+
+@mixin pseudo-element-slideX {
+
+    @include pseudo-element;
+    top: 0;
+    width: 0%;
+    height: 100%;
+
+}
+
+@mixin pseudo-element-slideY {
+
+    @include pseudo-element;
+    width: 100%;
+    height: 0px;
+    transition: all 0.3s ease;
+}
+
+@mixin img-scale {
+
+    width: 100%;
+    position: relative;
+    top: -2px;
+    left: 0;
+    cursor: pointer;
     transition: all 0.3s ease;
 
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+@mixin skewTag {
+    padding: 1.1rem 2rem;
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    color: white;
+    font-weight: 600;
+    background-color: #0082f8;
+    transform: skewY(-5deg);
 }

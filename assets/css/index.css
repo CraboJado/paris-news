@@ -6,28 +6,33 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+/**** header *******/
 .header-logo img {
   width: 90%;
 }
 
+/**** header-nav *******/
 .header-nav {
   font-size: 1.8rem;
   font-weight: 600;
+  /***** header-nav__list ******/
+  /***** header-nav__btn ******/
+  /***** header-nav__connection ******/
 }
 .header-nav__list li {
   position: relative;
   padding: 0 1rem;
 }
 .header-nav__list li::before {
-  height: 0px;
-  background-color: #071f32;
-  top: -96%;
-  left: 0;
   content: "";
   display: block;
-  width: 100%;
   position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0px;
   transition: all 0.3s ease;
+  background-color: #071f32;
+  top: -96%;
 }
 .header-nav__list li:hover::before {
   height: 0.7rem;
@@ -41,8 +46,7 @@ body {
   font-size: 1.3rem;
   position: relative;
 }
-.header-nav__btn span,
-.header-nav__btn i {
+.header-nav__btn span, .header-nav__btn i {
   position: relative;
   z-index: 999;
 }
@@ -52,16 +56,16 @@ body {
 .header-nav__btn::before {
   content: "";
   display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 0%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-color: #071f32;
   transition: all 0.2s ease;
 }
 .header-nav__btn:hover::before {
   width: 100%;
-  background-color: #071f32;
 }
 .header-nav__btn:hover {
   color: white;
@@ -75,21 +79,27 @@ body {
 .header-nav__connection::before {
   content: "";
   display: block;
-  width: 100%;
-  height: 0;
-  background-color: #354bcf;
   position: absolute;
-  top: -70%;
   left: 0;
+  width: 100%;
+  height: 0px;
   transition: all 0.3s ease;
+  top: -70%;
+  background-color: #354bcf;
 }
 .header-nav__connection:hover::before {
   height: 0.7rem;
 }
 
 /*************** Main**************/
+/*************** side-nav**************/
 .side-nav {
   font-weight: 600;
+  /*****side-nav__title******/
+  /*****side-nav__list******/
+  /*****side-nav__locations******/
+  /*****side-nav___map ******/
+  /*****side-nav__services ******/
 }
 .side-nav__title {
   font-size: 2rem;
@@ -116,27 +126,27 @@ body {
   color: #071f32;
 }
 .side-nav__map {
-  color: #e22c3f;
   padding: 5px;
   width: 40%;
-  position: relative;
   font-size: 1.1rem;
   font-weight: 500;
+  color: #e22c3f;
+  position: relative;
 }
 .side-nav__map::before {
   content: "";
   display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 0%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-color: #e22c3f;
   transition: all 0.3s ease;
   z-index: -1;
 }
 .side-nav__map:hover::before {
   width: 100%;
-  background-color: #e22c3f;
 }
 .side-nav__map:hover {
   color: white;
@@ -153,11 +163,11 @@ body {
 .side-nav__services li::before {
   content: "";
   display: block;
+  position: absolute;
+  left: 0;
+  top: -2px;
   width: 0;
   height: 2px;
-  position: absolute;
-  top: -2px;
-  left: 0;
   transition: all 0.3s ease;
   background-color: #071f32;
 }
@@ -183,17 +193,17 @@ body {
   width: 50%;
 }
 
-/** News */
-.spotlight {
+/*************** spotlight **************/
+/*************** spotlight__article **************/
+.spotlight__article {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 3rem;
 }
-
-.spotlight__article .img-wrapper {
+.spotlight__img {
   overflow: hidden;
 }
-.spotlight__article img {
+.spotlight__img img {
   width: 100%;
   position: relative;
   top: -2px;
@@ -201,27 +211,28 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.spotlight__article img:hover {
+.spotlight__img img:hover {
   transform: scale(1.1);
 }
+
 .spotlight__content {
-  position: relative;
-  background-color: white;
-  padding: 4rem 3rem;
   width: 80%;
+  padding: 4rem 3rem;
+  position: relative;
   left: 50%;
+  background-color: white;
   transform: translateX(-50%) translateY(-20%);
 }
 .spotlight__content h2 {
-  position: absolute;
   padding: 1.1rem 2rem;
-  background-color: #0082f8;
-  font-size: 1.6rem;
+  position: absolute;
   top: -20px;
   left: 30px;
-  transform: skewY(-5deg);
   color: white;
   font-weight: 600;
+  background-color: #0082f8;
+  transform: skewY(-5deg);
+  font-size: 1.6rem;
 }
 .spotlight__content h3 {
   font-size: 4.2rem;
@@ -232,11 +243,7 @@ body {
   font-size: 1.5rem;
 }
 
-.actuality {
-  display: flex;
-  justify-content: space-between;
-}
-
+/*************** actuality__article **************/
 .actuality__article {
   width: 43%;
 }
@@ -276,15 +283,15 @@ body {
   transform: translateX(-50%);
 }
 .actuality__content h2 {
-  position: absolute;
   padding: 1.1rem 2rem;
-  background-color: #0082f8;
-  font-size: 1rem;
+  position: absolute;
   top: -20px;
   left: 30px;
-  transform: skewY(-5deg);
   color: white;
   font-weight: 600;
+  background-color: #0082f8;
+  transform: skewY(-5deg);
+  font-size: 1rem;
   text-transform: uppercase;
 }
 .actuality__content h3 {
@@ -299,7 +306,6 @@ body {
   gap: 1rem;
   padding-left: 5rem;
 }
-
 .aside-news__item {
   display: flex;
   border-bottom: 1px solid #e8e8e8;
@@ -343,11 +349,11 @@ body {
 .aside-news__item .aside__showmore-btn::before {
   content: "";
   display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 0%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   transition: all 0.3s ease;
   z-index: -1;
 }
@@ -367,6 +373,8 @@ body {
 /*******************footer ***************/
 .footer {
   display: flex;
+  /*****footer-left ******/
+  /*****footer-left ******/
 }
 .footer-left {
   flex: 2.5;
@@ -437,11 +445,11 @@ body {
 .footer-left .related-services li a::before {
   content: "";
   display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 0%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   transition: all 0.3s ease;
   z-index: -1;
   background-color: #e22c3f;
@@ -506,11 +514,11 @@ body {
 .footer-right button::before {
   content: "";
   display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 0%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   transition: all 0.3s ease;
   background-color: white;
 }
@@ -545,11 +553,11 @@ body {
 .footer-right > a::before {
   content: "";
   display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 0%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   transition: all 0.3s ease;
   z-index: -1;
 }
