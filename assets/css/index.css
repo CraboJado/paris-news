@@ -341,7 +341,7 @@ body {
 .aside-news__item .aside__showmore-btn {
   color: #e22c3f;
   padding: 3px 10px;
-  width: 40%;
+  width: 47%;
   position: relative;
   font-size: 1.5rem;
   font-weight: 500;
@@ -469,7 +469,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 2.4rem 7rem 2.6rem;
-  gap: 4rem;
+  gap: 2rem;
 }
 .footer-left .footer-nav__list li {
   cursor: pointer;
